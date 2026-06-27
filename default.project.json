@@ -16,20 +16,7 @@
     },
 
     "StarterGui": {
-      "AdminGUI": {
-        "$className": "ScreenGui",
-        "$ignoreUnknownInstances": true
-      },
-
-      "AdminToggleGUI": {
-        "$className": "ScreenGui",
-        "$ignoreUnknownInstances": true
-      },
-
-      "CashUI": {
-        "$className": "ScreenGui",
-        "$ignoreUnknownInstances": true
-      },
+      "$ignoreUnknownInstances": true,
 
       "PlayUI": {
         "$className": "ScreenGui",
@@ -39,31 +26,6 @@
           "$ignoreUnknownInstances": true,
           "$path": "src/client/uicontroller/PlayUI/PlayButton"
         }
-      },
-
-      "PrestigeShopUI": {
-        "$className": "ScreenGui",
-        "$ignoreUnknownInstances": true
-      },
-
-      "PrestigeUI": {
-        "$className": "ScreenGui",
-        "$ignoreUnknownInstances": true
-      },
-
-      "RebirthUI": {
-        "$className": "ScreenGui",
-        "$ignoreUnknownInstances": true
-      },
-
-      "RoundUI": {
-        "$className": "ScreenGui",
-        "$ignoreUnknownInstances": true
-      },
-
-      "ShopGui": {
-        "$className": "ScreenGui",
-        "$ignoreUnknownInstances": true
       }
     },
 
@@ -91,12 +53,15 @@
 
     "StarterPlayer": {
       "StarterPlayerScripts": {
-        "$path": "src/client/player",
+        "$ignoreUnknownInstances": true,
         "CharacterManager": {
           "$path": "src/client/character"
         },
+        "PlayerScripts": {
+          "$path": "src/client/player"
+        },
         "ClientInit": {
-          "$path": "src/client/init.client.luau"
+          "$path": "src/init.client.luau" 
         }
       }
     }
