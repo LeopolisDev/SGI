@@ -18,20 +18,17 @@
     "StarterGui": {
       "AdminGUI": {
         "$className": "ScreenGui",
-        "$ignoreUnknownInstances": true,
-        "$path": "src/client/uicontroller/AdminGUI"
+        "$ignoreUnknownInstances": true
       },
 
       "AdminToggleGUI": {
         "$className": "ScreenGui",
-        "$ignoreUnknownInstances": true,
-        "$path": "src/client/uicontroller/AdminToggleGUI"
+        "$ignoreUnknownInstances": true
       },
 
       "CashUI": {
         "$className": "ScreenGui",
-        "$ignoreUnknownInstances": true,
-        "$path": "src/client/uicontroller/CashUI"
+        "$ignoreUnknownInstances": true
       },
 
       "PlayUI": {
@@ -46,32 +43,27 @@
 
       "PrestigeShopUI": {
         "$className": "ScreenGui",
-        "$ignoreUnknownInstances": true,
-        "$path": "src/client/uicontroller/PrestigeShopUI"
+        "$ignoreUnknownInstances": true
       },
 
       "PrestigeUI": {
         "$className": "ScreenGui",
-        "$ignoreUnknownInstances": true,
-        "$path": "src/client/uicontroller/PrestigeUI"
+        "$ignoreUnknownInstances": true
       },
 
       "RebirthUI": {
         "$className": "ScreenGui",
-        "$ignoreUnknownInstances": true,
-        "$path": "src/client/uicontroller/RebirthUI"
+        "$ignoreUnknownInstances": true
       },
 
       "RoundUI": {
         "$className": "ScreenGui",
-        "$ignoreUnknownInstances": true,
-        "$path": "src/client/uicontroller/RoundUI"
+        "$ignoreUnknownInstances": true
       },
 
       "ShopGui": {
         "$className": "ScreenGui",
-        "$ignoreUnknownInstances": true,
-        "$path": "src/client/uicontroller/ShopGui"
+        "$ignoreUnknownInstances": true
       }
     },
 
