@@ -18,65 +18,80 @@
     "StarterGui": {
       "AdminGUI": {
         "$className": "ScreenGui",
+        "$ignoreUnknownInstances": true,
         "$path": "src/client/uicontroller/AdminGUI"
       },
 
       "AdminToggleGUI": {
         "$className": "ScreenGui",
+        "$ignoreUnknownInstances": true,
         "$path": "src/client/uicontroller/AdminToggleGUI"
       },
 
       "CashUI": {
         "$className": "ScreenGui",
+        "$ignoreUnknownInstances": true,
         "$path": "src/client/uicontroller/CashUI"
       },
 
       "PlayUI": {
         "$className": "ScreenGui",
+        "$ignoreUnknownInstances": true,
         "PlayButton": {
           "$className": "TextButton",
+          "$ignoreUnknownInstances": true,
           "$path": "src/client/uicontroller/PlayUI/PlayButton"
         }
       },
 
       "PrestigeShopUI": {
         "$className": "ScreenGui",
+        "$ignoreUnknownInstances": true,
         "$path": "src/client/uicontroller/PrestigeShopUI"
       },
 
       "PrestigeUI": {
         "$className": "ScreenGui",
+        "$ignoreUnknownInstances": true,
         "$path": "src/client/uicontroller/PrestigeUI"
       },
 
       "RebirthUI": {
         "$className": "ScreenGui",
+        "$ignoreUnknownInstances": true,
         "$path": "src/client/uicontroller/RebirthUI"
       },
 
       "RoundUI": {
         "$className": "ScreenGui",
+        "$ignoreUnknownInstances": true,
         "$path": "src/client/uicontroller/RoundUI"
       },
 
       "ShopGui": {
         "$className": "ScreenGui",
+        "$ignoreUnknownInstances": true,
         "$path": "src/client/uicontroller/ShopGui"
       }
     },
 
     "Workspace": {
+      "$ignoreUnknownInstances": true,
       "PrestigeBoard": {
         "$className": "Part",
+        "$ignoreUnknownInstances": true,
         "SurfaceGui": {
           "$className": "SurfaceGui",
+          "$ignoreUnknownInstances": true,
           "$path": "src/client/uicontroller/SurfaceGuis/PrestigeBoard"
         }
       },
       "RebirthBoard": {
         "$className": "Part",
+        "$ignoreUnknownInstances": true,
         "SurfaceGui": {
           "$className": "SurfaceGui",
+          "$ignoreUnknownInstances": true,
           "$path": "src/client/uicontroller/SurfaceGuis/RebirthBoard"
         }
       }
