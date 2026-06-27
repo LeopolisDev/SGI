@@ -16,74 +16,30 @@
     },
 
     "StarterGui": {
-      "AdminGUI": {
-        "$className": "ScreenGui",
-        "$ignoreUnknownInstances": true
-      },
-
-      "AdminToggleGUI": {
-        "$className": "ScreenGui",
-        "$ignoreUnknownInstances": true
-      },
-
-      "CashUI": {
-        "$className": "ScreenGui",
-        "$ignoreUnknownInstances": true
-      },
-
-      "PlayUI": {
-        "$className": "ScreenGui",
-        "$ignoreUnknownInstances": true,
-        "PlayButton": {
-          "$className": "TextButton",
-          "$ignoreUnknownInstances": true,
-          "$path": "src/client/uicontroller/PlayUI/PlayButton"
-        }
-      },
-
-      "PrestigeShopUI": {
-        "$className": "ScreenGui",
-        "$ignoreUnknownInstances": true
-      },
-
-      "PrestigeUI": {
-        "$className": "ScreenGui",
-        "$ignoreUnknownInstances": true
-      },
-
-      "RebirthUI": {
-        "$className": "ScreenGui",
-        "$ignoreUnknownInstances": true
-      },
-
-      "RoundUI": {
-        "$className": "ScreenGui",
-        "$ignoreUnknownInstances": true
-      },
-
-      "ShopGui": {
-        "$className": "ScreenGui",
-        "$ignoreUnknownInstances": true
-      }
+      "AdminGUI": { "$className": "ScreenGui" },
+      "AdminToggleGUI": { "$className": "ScreenGui" },
+      "CashUI": { "$className": "ScreenGui" },
+      "PlayUI": { "$className": "ScreenGui" },
+      "PrestigeShopUI": { "$className": "ScreenGui" },
+      "PrestigeUI": { "$className": "ScreenGui" },
+      "RebirthUI": { "$className": "ScreenGui" },
+      "RoundUI": { "$className": "ScreenGui" },
+      "ShopGui": { "$className": "ScreenGui" }
     },
 
     "Workspace": {
-      "$ignoreUnknownInstances": true,
       "PrestigeBoard": {
         "$className": "Part",
-        "$ignoreUnknownInstances": true,
         "SurfaceGui": {
           "$className": "SurfaceGui",
-          "$ignoreUnknownInstances": true,
           "$path": "src/client/uicontroller/SurfaceGuis/PrestigeBoard"
         }
       },
+
       "RebirthBoard": {
         "$className": "Part",
-        "$ignoreUnknownInstances": true,
         "SurfaceGui": {
           "$className": "SurfaceGui",
-          "$ignoreUnknownInstances": true,
           "$path": "src/client/uicontroller/SurfaceGuis/RebirthBoard"
         }
       }
@@ -91,12 +47,12 @@
 
     "StarterPlayer": {
       "StarterPlayerScripts": {
-        "$path": "src/client/player",
+        "UIController": {
+          "$path": "src/client/player/UIController"
+        },
+
         "CharacterManager": {
           "$path": "src/client/character"
-        },
-        "ClientInit": {
-          "$path": "src/client/init.client.luau"
         }
       }
     }
