@@ -18,39 +18,60 @@
     "StarterGui": {
       "AdminGUI": {
         "$className": "ScreenGui",
-        "$path": "src/client/player/UIController/AdminGUI"
+        "LocalScript": {
+          "$path": "src/client/player/UIController/AdminGUI/LocalScript.client.luau"
+        }
       },
       "AdminToggleGUI": {
         "$className": "ScreenGui",
-        "$path": "src/client/player/UIController/AdminToggleGUI"
+        "LocalScript": {
+          "$path": "src/client/player/UIController/AdminToggleGUI/LocalScript.client.luau"
+        }
       },
       "CashUI": {
         "$className": "ScreenGui",
-        "$path": "src/client/player/UIController/CashUI"
+        "LocalScript": {
+          "$path": "src/client/player/UIController/CashUI/LocalScript.client.luau"
+        }
       },
       "PlayUI": {
         "$className": "ScreenGui",
-        "$path": "src/client/player/UIController/PlayUI"
+        "PlayButton": {
+          "$className": "TextButton",
+          "LocalScript": {
+            "$path": "src/client/player/UIController/PlayUI/PlayButton/LocalScript.client.luau"
+          }
+        }
       },
       "PrestigeShopUI": {
         "$className": "ScreenGui",
-        "$path": "src/client/player/UIController/PrestigeShopUI"
+        "LocalScript": {
+          "$path": "src/client/player/UIController/PrestigeShopUI/LocalScript.client.luau"
+        }
       },
       "PrestigeUI": {
         "$className": "ScreenGui",
-        "$path": "src/client/player/UIController/PrestigeUI"
+        "LocalScript": {
+          "$path": "src/client/player/UIController/PrestigeUI/LocalScript.client.luau"
+        }
       },
       "RebirthUI": {
         "$className": "ScreenGui",
-        "$path": "src/client/player/UIController/RebirthUI"
+        "LocalScript": {
+          "$path": "src/client/player/UIController/RebirthUI/LocalScript.client.luau"
+        }
       },
       "RoundUI": {
         "$className": "ScreenGui",
-        "$path": "src/client/player/UIController/RoundUI"
+        "LocalScript": {
+          "$path": "src/client/player/UIController/RoundUI/LocalScript.client.luau"
+        }
       },
       "ShopGui": {
         "$className": "ScreenGui",
-        "$path": "src/client/player/UIController/ShopGui"
+        "LocalScript": {
+          "$path": "src/client/player/UIController/ShopGui/LocalScript.client.luau"
+        }
       }
     },
 
@@ -59,7 +80,9 @@
         "$className": "Part",
         "SurfaceGui": {
           "$className": "SurfaceGui",
-          "$path": "src/client/player/UIController/SurfaceGuis/PrestigeBoard"
+          "SurfaceManager": {
+            "$path": "src/client/player/UIController/SurfaceGuis/PrestigeBoard/SurfaceManager.client.luau"
+          }
         }
       },
 
@@ -67,7 +90,9 @@
         "$className": "Part",
         "SurfaceGui": {
           "$className": "SurfaceGui",
-          "$path": "src/client/player/UIController/SurfaceGuis/RebirthBoard"
+          "SurfaceManager": {
+            "$path": "src/client/player/UIController/SurfaceGuis/RebirthBoard/SurfaceManager.client.luau"
+          }
         }
       }
     },
