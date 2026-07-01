@@ -16,19 +16,16 @@
     },
 
     "StarterGui": {
-      "SurfaceGuis": {
-        "$className": "Folder",
-        "PrestigeBoard": {
-          "$className": "SurfaceGui",
-          "SurfaceManager": {
-            "$path": "src/client/player/UIController/SurfaceGuis/PrestigeBoard/SurfaceManager.client.luau"
-          }
-        },
-        "RebirthBoard": {
-          "$className": "SurfaceGui",
-          "SurfaceManager": {
-            "$path": "src/client/player/UIController/SurfaceGuis/RebirthBoard/SurfaceManager.client.luau"
-          }
+      "PrestigeBoard": {
+        "$className": "SurfaceGui",
+        "SurfaceManager": {
+          "$path": "src/client/player/UIController/SurfaceGuis/PrestigeBoard/SurfaceManager.client.luau"
+        }
+      },
+      "RebirthBoard": {
+        "$className": "SurfaceGui",
+        "SurfaceManager": {
+          "$path": "src/client/player/UIController/SurfaceGuis/RebirthBoard/SurfaceManager.client.luau"
         }
       },
       "AdminGUI": {
