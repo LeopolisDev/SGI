@@ -16,15 +16,42 @@
     },
 
     "StarterGui": {
-      "AdminGUI": { "$className": "ScreenGui" },
-      "AdminToggleGUI": { "$className": "ScreenGui" },
-      "CashUI": { "$className": "ScreenGui" },
-      "PlayUI": { "$className": "ScreenGui" },
-      "PrestigeShopUI": { "$className": "ScreenGui" },
-      "PrestigeUI": { "$className": "ScreenGui" },
-      "RebirthUI": { "$className": "ScreenGui" },
-      "RoundUI": { "$className": "ScreenGui" },
-      "ShopGui": { "$className": "ScreenGui" }
+      "AdminGUI": {
+        "$className": "ScreenGui",
+        "$path": "src/client/player/UIController/AdminGUI"
+      },
+      "AdminToggleGUI": {
+        "$className": "ScreenGui",
+        "$path": "src/client/player/UIController/AdminToggleGUI"
+      },
+      "CashUI": {
+        "$className": "ScreenGui",
+        "$path": "src/client/player/UIController/CashUI"
+      },
+      "PlayUI": {
+        "$className": "ScreenGui",
+        "$path": "src/client/player/UIController/PlayUI"
+      },
+      "PrestigeShopUI": {
+        "$className": "ScreenGui",
+        "$path": "src/client/player/UIController/PrestigeShopUI"
+      },
+      "PrestigeUI": {
+        "$className": "ScreenGui",
+        "$path": "src/client/player/UIController/PrestigeUI"
+      },
+      "RebirthUI": {
+        "$className": "ScreenGui",
+        "$path": "src/client/player/UIController/RebirthUI"
+      },
+      "RoundUI": {
+        "$className": "ScreenGui",
+        "$path": "src/client/player/UIController/RoundUI"
+      },
+      "ShopGui": {
+        "$className": "ScreenGui",
+        "$path": "src/client/player/UIController/ShopGui"
+      }
     },
 
     "Workspace": {
@@ -32,7 +59,7 @@
         "$className": "Part",
         "SurfaceGui": {
           "$className": "SurfaceGui",
-          "$path": "src/client/uicontroller/SurfaceGuis/PrestigeBoard"
+          "$path": "src/client/player/UIController/SurfaceGuis/PrestigeBoard"
         }
       },
 
@@ -40,17 +67,19 @@
         "$className": "Part",
         "SurfaceGui": {
           "$className": "SurfaceGui",
-          "$path": "src/client/uicontroller/SurfaceGuis/RebirthBoard"
+          "$path": "src/client/player/UIController/SurfaceGuis/RebirthBoard"
         }
       }
     },
 
     "StarterPlayer": {
       "StarterPlayerScripts": {
-        "UIController": {
-          "$path": "src/client/player/UIController"
+        "ChatTags": {
+          "$path": "src/client/player/ChatTags.client.luau"
         },
-
+        "LocalScript": {
+          "$path": "src/client/player/LocalScript.client.luau"
+        },
         "CharacterManager": {
           "$path": "src/client/character"
         }
