@@ -16,6 +16,21 @@
     },
 
     "StarterGui": {
+      "SurfaceGuis": {
+        "$className": "Folder",
+        "PrestigeBoard": {
+          "$className": "SurfaceGui",
+          "SurfaceManager": {
+            "$path": "src/client/player/UIController/SurfaceGuis/PrestigeBoard/SurfaceManager.client.luau"
+          }
+        },
+        "RebirthBoard": {
+          "$className": "SurfaceGui",
+          "SurfaceManager": {
+            "$path": "src/client/player/UIController/SurfaceGuis/RebirthBoard/SurfaceManager.client.luau"
+          }
+        }
+      },
       "AdminGUI": {
         "$className": "ScreenGui",
         "LocalScript": {
@@ -76,30 +91,6 @@
     },
 
     "Workspace": {
-      "Lobby": {
-        "$className": "Folder",
-        "Boards": {
-          "$className": "Folder",
-          "PrestigeButton": {
-            "$className": "Model",
-            "SurfaceGui": {
-              "$className": "SurfaceGui",
-              "SurfaceManager": {
-                "$path": "src/client/player/UIController/SurfaceGuis/PrestigeBoard/SurfaceManager.client.luau"
-              }
-            }
-          },
-          "RebirthButton": {
-            "$className": "Model",
-            "SurfaceGui": {
-              "$className": "SurfaceGui",
-              "SurfaceManager": {
-                "$path": "src/client/player/UIController/SurfaceGuis/RebirthBoard/SurfaceManager.client.luau"
-              }
-            }
-          }
-        }
-      }
     },
 
     "StarterPlayer": {
