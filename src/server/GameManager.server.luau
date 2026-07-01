@@ -41,9 +41,7 @@ local RAINBOW_SPAWN_CHANCE = 0.05 -- 5% chance for rainbow blocks (NEW)
 local AdminGiveMoney = ensureEvent("AdminGiveMoney")
 local AdminGivePrestige = ensureEvent("AdminGivePrestige")
 
--- Rebirth cost defaults
-local rebirthCostMoney = 1000000000 -- 1B
-local rebirthCostPP = 2500000000 -- 2.5B
+
 
 -- Admin Give Prestige handler
 AdminGivePrestige.OnServerEvent:Connect(function(player, targetPlayerName, amount)
@@ -418,6 +416,10 @@ RebirthRequest.OnServerEvent:Connect(function(player)
 	local money = player:GetAttribute("Money") or 0
 	local prestigePoints = player:GetAttribute("PrestigePoints") or 0
 	
+	local rebirthPoints = player:GetAttribute("RebirthPoints") or 0
+	local rebirthCostMoney = 1000000000 * (1.5 ^ rebirthPoints)
+	local rebirthCostPP = 2500000000 * (1.5 ^ rebirthPoints)
+	
 	if money >= rebirthCostMoney and prestigePoints >= rebirthCostPP then
 		player:SetAttribute("Money", money - rebirthCostMoney)
 		player:SetAttribute("PrestigePoints", prestigePoints - rebirthCostPP)
@@ -425,8 +427,7 @@ RebirthRequest.OnServerEvent:Connect(function(player)
 		local stats = player:FindFirstChild("leaderstats")
 		if stats and stats:FindFirstChild("Money") then stats.Money.Value = money - rebirthCostMoney end
 		
-		local currentRP = player:GetAttribute("RebirthPoints") or 0
-		player:SetAttribute("RebirthPoints", currentRP + 1)
+		player:SetAttribute("RebirthPoints", rebirthPoints + 1)
 	end
 end)
 
@@ -485,8 +486,7 @@ RequestPickup.OnServerEvent:Connect(function(player, cashInstance)
 	local amt = cashInstance:FindFirstChild("Amount")
 	if not amt then return end
 
-	local multiplier = player:GetAttribute("MoneyMultiplier") or 1
-	CurrencyService.AddMoney(player, math.floor(amt.Value * multiplier))
+	CurrencyService.AddMoney(player, amt.Value)
 	cashInstance:Destroy()
 end)
 

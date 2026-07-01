@@ -57,12 +57,39 @@ Players.PlayerRemoving:Connect(function(player)
 	saveMoney(player)
 end)
 
-local function addMoney(player, amount)
+local function calculatePrestigeBoost(prestigePoints)
+	if prestigePoints <= 0 then return 1 end
+
+	-- Scaling boost: 1pp = 1.5x, 10pp = 2.25x, 100pp = 3.375x, etc.
+	local boost = 1.5 ^ (math.log10(math.max(1, prestigePoints)) + 1)
+	return math.floor(boost * 100) / 100 -- Round to 2 decimal places
+end
+
+local function addMoney(player, amount, ignoreMultipliers)
 	if not player or not player.Parent then return end
 	local stat = player:FindFirstChild("leaderstats") and player.leaderstats:FindFirstChild("Money")
 	if stat then
 		local current = stat.Value
-		local newValue = NumberHandler.safeAdd(current, amount)
+		local finalAmount = amount
+
+		if not ignoreMultipliers then
+			local baseMultiplier = player:GetAttribute("MoneyMultiplier") or 1
+			local prestigeMoneyMulti = player:GetAttribute("PrestigeMoneyMulti") or 1
+			local prestigePoints = player:GetAttribute("PrestigePoints") or 0
+			local prestigeBoost = calculatePrestigeBoost(prestigePoints)
+			local rebirthPoints = player:GetAttribute("RebirthPoints") or 0
+			local rebirthMultiplier = 1.5 ^ rebirthPoints
+
+			local totalMultiplier = baseMultiplier * prestigeMoneyMulti * prestigeBoost * rebirthMultiplier
+			finalAmount = math.floor(amount * totalMultiplier)
+			
+			print(string.format("[Currency] %s: Base %d × %.2fx (Rebirth: %.2fx) = %d", 
+				player.Name, amount, totalMultiplier, rebirthMultiplier, finalAmount))
+		else
+			print(string.format("[Currency] %s: Added raw %d", player.Name, amount))
+		end
+
+		local newValue = NumberHandler.safeAdd(current, finalAmount)
 
 		if NumberHandler.isSafeNumber(newValue) then
 			stat.Value = newValue

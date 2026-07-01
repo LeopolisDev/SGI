@@ -53,15 +53,16 @@ end
 local function updateBoard()
 	local money = player:GetAttribute("Money") or 0
 	local prestigePoints = player:GetAttribute("PrestigePoints") or 0
+	local rebirthPoints = player:GetAttribute("RebirthPoints") or 0
 	
-	local rebirthCostMoney = 1000000000 -- 1B
-	local rebirthCostPP = 2500000000 -- 2.5B
+	local rebirthCostMoney = 1000000000 * (1.5 ^ rebirthPoints)
+	local rebirthCostPP = 2500000000 * (1.5 ^ rebirthPoints)
     
     local canRebirth = (money >= rebirthCostMoney and prestigePoints >= rebirthCostPP)
     local pointsToGet = canRebirth and 1 or 0
 
 	pointsLabel.Text = "Rebirth Points You Will Get: " .. pointsToGet
-	costLabel.Text = "Cost: 1.00B Money & 2.50B PP"
+	costLabel.Text = "Cost: " .. formatNumber(rebirthCostMoney) .. " Money & " .. formatNumber(rebirthCostPP) .. " PP"
 	
 	clickButton.Active = canRebirth
 	clickButton.AutoButtonColor = canRebirth
@@ -74,9 +75,10 @@ clickButton.MouseButton1Click:Connect(function()
 	task.delay(0.5, updateBoard)
 end)
 
--- Auto-update when money or PP changes
+-- Auto-update when money, PP, or rebirth points changes
 player:GetAttributeChangedSignal("Money"):Connect(updateBoard)
 player:GetAttributeChangedSignal("PrestigePoints"):Connect(updateBoard)
+player:GetAttributeChangedSignal("RebirthPoints"):Connect(updateBoard)
 
 -- Initialize UI on first load
 updateBoard()
